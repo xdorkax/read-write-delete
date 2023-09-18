@@ -1,0 +1,103 @@
+:root {
+  --background: #2a2b2f;
+  --text: #ffffff;
+
+  --inputbg: #58595e;
+  --inputlight: #717277;
+  --inputdark: #232428;
+
+  --hoverbg: #684682;
+  --hoverlight: #7a658e;
+  --hoverdark: #281e37;
+
+  --donebg: #4ea752;
+  --donelight: #75b581;
+  --donedark: #2f6928;
+
+  --redbg: #f24b5b;
+  --redlight: #e7607e;
+  --reddark: #43191d;
+}
+
+html {
+  background: var(--background);
+  color: var(--text);
+  font: 16px / 1.6 sans-serif;
+}
+
+body {
+  width: 40em;
+  margin: 1em auto;
+}
+
+#menu,
+li,
+div {
+  display: flex;
+  align-items: start;
+  flex-flow: column wrap;
+}
+
+#menu {
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+label {
+  font-size: 0.8em;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+input,
+button {
+  background: var(--inputbg);
+  color: var(--text);
+  border: 0;
+  outline: 0;
+}
+
+#menu input {
+  flex: 1 0 auto;
+  padding: 0.5em;
+}
+
+button,
+li {
+  transition: all 0.5s;
+}
+
+button {
+  margin-left: 0.5em;
+  border-top: 1px solid var(--inputlight);
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  box-shadow: 0 2px 0 2px var(--inputdark);
+}
+
+button:hover {
+  border-top: 1px solid var(--hoverlight);
+  background: var(--hoverbg);
+  box-shadow: 0 2px 0 2px var(--hoverdark);
+}
+
+#list {
+  flex-flow: column nowrap;
+  padding-top: 15px;
+}
+
+#list > div {
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  width: 100%;
+}
